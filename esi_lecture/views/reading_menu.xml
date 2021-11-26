@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Action to open To-do Task list -->
+    <act_window id="action_reading_book"
+      name="Livres"
+      res_model="reading.book"
+	  view_mode="tree,form"/>
+	
+    <menuitem id="menu_reading_book" name="Livres"/>
+
+    <menuitem id="reading_book_menu" name="Lives" parent="menu_reading_book" />
+
+    <menuitem id="reading_menu" name="Livres" parent="reading_book_menu" action="action_reading_book" />
+    
+</odoo>
