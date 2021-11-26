@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- List view -->
+    <record id="view_tree_reading_book" model="ir.ui.view">
+      <field name="name">Reading Book Tree</field>
+      <field name="model">reading.book</field>
+      <field name="arch" type="xml">
+          <field name="title"/>
+          <field name="publication_date"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- Search view -->
+    <record id="view_filter_reading_book" model="ir.ui.view">
+      <field name="name">Reading Book Filter</field>
+      <field name="model">reading.book</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="title"/>
+          <filter string="Without Authors" name="filter_without_authors" domain="[('authors_ids','=',Null)]"/>
+        </search>
+      </field>
+    </record>
+
+
+    <!-- Form view -->
+    <record id="view_form_reading_book" model="ir.ui.view">
+      <field name="name">Reading Book Form</field>
+      <field name="model">reading.book</field>
+      <field name="arch" type="xml">
+
+        <form>
+          <sheet>
+            <group name="group_top">
+              <group name="group_left">
+                <field name="title" />
+		            <field name="authors_ids" widget="many2many_tags"/>
+                <field name="page_number" />
+              </group>
+              <group name="group_right">
+                <field name="publication_date" />
+                <field name="cover" widget="image" class="oe_avatar" />
+              </group>
+            </group>
+            <group name="group_bottom">
+                <field name="description" widget="html"/>
+            </group>
+          </sheet>
+        </form>
+
+      </field>
+    </record>
+
+</odoo>
