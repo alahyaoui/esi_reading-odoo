@@ -21,7 +21,7 @@
       <field name="arch" type="xml">
         <search>
           <field name="title"/>
-          <filter string="Without Authors" name="filter_without_authors" domain="[('authors_ids','not in','res.partner')]"/>
+          <filter string="Without Authors" name="filter_without_authors" domain="[('authors_ids','=','False')]"/>
         </search>
       </field>
     </record>
