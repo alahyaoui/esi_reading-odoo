@@ -1,15 +1,31 @@
 <?xml version="1.0"?>
 <odoo>
-    <!-- Action to open To-do Task list -->
-    <act_window id="action_reading_book"
-      name="Livres"
-      res_model="reading.book"
-	  view_mode="tree,form"/>
-	
+
+	<record model="ir.actions.act_window" id="action_reading_book">
+        <field name="name">Livres</field>
+        <field name="res_model">reading.book</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
     <menuitem id="menu_reading_book" name="Livres"/>
 
-    <menuitem id="reading_book_menu" name="Lives" parent="menu_reading_book" />
+    <menuitem id="reading_book_menu" 
+        name="Livres" 
+        parent="menu_reading_book" />
 
-    <menuitem id="reading_menu" name="Livres" parent="reading_book_menu" action="action_reading_book" />
+    <menuitem id="reading_menu" 
+        name="Livres" 
+        parent="reading_book_menu" 
+        action="action_reading_book" />
     
+    <record model="ir.actions.act_window" id="contact_list_action">
+        <field name="name">Contacts</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    <menuitem id="configuration_menu" name="Configuration" parent="menu_reading_book" />
+    
+    <menuitem id="contact_menu" name="Contacts" parent="configuration_menu" action="contact_list_action" />
+
 </odoo>

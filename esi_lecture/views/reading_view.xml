@@ -6,6 +6,7 @@
       <field name="name">Reading Book Tree</field>
       <field name="model">reading.book</field>
       <field name="arch" type="xml">
+        <tree>
           <field name="title"/>
           <field name="publication_date"/>
         </tree>
@@ -20,7 +21,7 @@
       <field name="arch" type="xml">
         <search>
           <field name="title"/>
-          <filter string="Without Authors" name="filter_without_authors" domain="[('authors_ids','=',Null)]"/>
+          <filter string="Without Authors" name="filter_without_authors" domain="[('authors_ids','not in','res.partner')]"/>
         </search>
       </field>
     </record>
