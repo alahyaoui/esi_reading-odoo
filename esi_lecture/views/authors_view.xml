@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- List view -->
+    <record id="view_tree_author_book" model="ir.ui.view">
+      <field name="name">Authors Book Tree</field>
+      <field name="model">res.partner</field>
+      <field name="priority">15</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="mobile"/>
+          <field name="email"/>
+          <field name="id"/>
+          <field name="city"/>
+          <field name="country_id"/>
+          <field name="company_id"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- Search view -->
+    <record id="view_filter_author_book" model="ir.ui.view">
+      <field name="name">Authors Book Filter</field>
+      <field name="model">res.partner</field>
+      <field name="priority">15</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+        </search>
+      </field>
+    </record>
+
+
+    <!-- Form view -->
+    <record id="base.view_partner_form" model="ir.ui.view">
+      <field name="priority">15</field>
+      <field name="name">Authors Book Form</field>
+      <field name="model">res.partner</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group name="group_top">
+              <group name="group_left">
+                <field name="name" />
+		        <field name="mobile"/>
+                <field name="email" />
+              </group>
+              <group name="group_right">
+                <field name="city" />
+                <field name="country_id"/>
+                <field name="company_id" />
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Graph view-->
+    <record id="view_graph_reading_book" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="name"/>
+                <field name="id" type="measure"/>
+            </graph>
+        </field>
+    </record>
+</odoo>

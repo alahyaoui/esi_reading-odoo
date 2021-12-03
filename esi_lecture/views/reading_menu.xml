@@ -4,7 +4,7 @@
 	<record model="ir.actions.act_window" id="action_reading_book">
         <field name="name">Livres</field>
         <field name="res_model">reading.book</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,for</field>
     </record>
 
     <menuitem id="menu_reading_book" name="Livres"/>
@@ -21,7 +21,7 @@
     <record model="ir.actions.act_window" id="auteurs_list_action">
         <field name="name">Partenaires-Auteurs</field>
         <field name="res_model">res.partner</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,graph</field>
     </record>
     
     <menuitem id="autheur_menu" name="Auteurs" parent="menu_reading_book" />
