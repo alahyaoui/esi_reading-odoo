@@ -29,6 +29,7 @@
         'views/templates.xml',
         'views/reading_menu.xml',
         'views/reading_view.xml',
+        'views/authors_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
