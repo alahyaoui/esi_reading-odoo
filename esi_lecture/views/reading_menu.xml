@@ -4,7 +4,7 @@
 	<record model="ir.actions.act_window" id="action_reading_book">
         <field name="name">Livres</field>
         <field name="res_model">reading.book</field>
-        <field name="view_mode">tree,for</field>
+        <field name="view_mode">tree,form</field>
     </record>
 
     <menuitem id="menu_reading_book" name="Livres"/>
