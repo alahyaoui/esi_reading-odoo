@@ -1,7 +1,6 @@
-from datetime import time
+from datetime import datetime
 
-from odoo import fields, models, api
-from odoo.fields import Datetime
+from odoo import fields, models, api, exceptions
 
 
 class Book(models.Model):
@@ -24,15 +23,11 @@ class Book(models.Model):
         )
     ]
 
-    #@api.constrains('publication_date')
+    @api.constrains('publication_date')
     def _check_dates(self):
-        publication_date = self.publication_date
-        current_date = Datetime.now()# .strftime('%d-%m-%Y')
-        if publication_date and current_date:
-            if publication_date < current_date:
-                return True
-        return False
-
-    _constraints = [
-        (_check_dates, 'The publication date must be anterior to the current date.', ['publication_date'])
-    ]
+        current_date = datetime.now().date()
+        for book in self:
+            publication_date = book.publication_date
+            if publication_date and current_date:
+                if publication_date >= current_date:
+                    raise exceptions.ValidationError('The publication date must be anterior to the current date.')
