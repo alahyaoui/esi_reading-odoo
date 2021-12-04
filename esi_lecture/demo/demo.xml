@@ -4,19 +4,16 @@
     <record model="res.partner" id="author_01">
       <field name="name">Donald E. Knuth</field>
       <field name="is_author">True</field>
-      <field name="books_count">0</field>
     </record>
 
     <record model="res.partner" id="author_02">
       <field name="name">Frank Herbert</field>
       <field name="is_author">True</field>
-      <field name="books_count">1</field>
     </record>
 
     <record model="res.partner" id="author_03">
       <field name="name">J.K. Rowling</field>
       <field name="is_author">True</field>
-      <field name="books_count">3</field>
     </record>
 
 
