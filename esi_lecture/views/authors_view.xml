@@ -15,6 +15,7 @@
                 <field name="city"/>
                 <field name="country_id"/>
                 <field name="company_id"/>
+                <field name="books_count"/>
             </tree>
         </field>
     </record>
@@ -55,6 +56,9 @@
                             <field name="is_author"/>
                         </group>
                     </group>
+                    <group name="group_bottom">
+                        <field name="books_ids"/>
+                    </group>
                 </sheet>
             </form>
         </field>
@@ -62,9 +66,10 @@
 
     <!-- Graph view-->
     <record id="view_graph_reading_book" model="ir.ui.view">
+        <field name="name">res.partner.graph</field>
         <field name="model">res.partner</field>
         <field name="arch" type="xml">
-            <graph type="bar">
+            <graph string="Books by Author" type="bar">
                 <field name="name"/>
                 <field name="books_count" type="measure"/>
             </graph>

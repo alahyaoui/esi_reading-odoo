@@ -9,7 +9,7 @@ class ResPartner(models.Model):
     books_ids = fields.Many2many('reading.book', string="Books")
     books_count = fields.Integer(string="Books count", compute='_get_books_count', store=True)
 
-    @api.depends('books_count')
+    @api.depends('books_ids')
     def _get_books_count(self):
         for r in self:
             r.books_count = len(r.books_ids)
