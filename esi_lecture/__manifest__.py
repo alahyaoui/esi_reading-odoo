@@ -30,6 +30,7 @@
         'views/reading_menu.xml',
         'views/reading_view.xml',
         'views/authors_view.xml',
+        'demo/demo.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
