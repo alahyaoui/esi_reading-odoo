@@ -16,14 +16,14 @@
 
     <!-- Search view -->
     <record id="view_filter_reading_book" model="ir.ui.view">
-        <field name="name">Reading Book Filter</field>
-        <field name="model">reading.book</field>
-        <field name="arch" type="xml">
-            <search>
-                <field name="title"/>
-                <filter string="Without Authors" name="filter_without_authors" domain="[('authors_ids','=','False')]"/>
-            </search>
-        </field>
+      <field name="name">Reading Book Filter</field>
+      <field name="model">reading.book</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="title"/>
+          <filter string="Without Authors" name="filter_without_authors" domain="[('authors_ids','=',False)]"/>
+        </search>
+      </field>
     </record>
 
 
