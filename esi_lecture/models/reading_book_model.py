@@ -1,5 +1,6 @@
 from datetime import datetime
-
+import logging
+_logger = logging.getLogger(__name__)
 from odoo import fields, models, api, exceptions
 
 
@@ -31,3 +32,6 @@ class Book(models.Model):
             if publication_date and current_date:
                 if publication_date >= current_date:
                     raise exceptions.ValidationError('The publication date must be anterior to the current date.')
+
+    def __str__(self):
+        return f"Book(title={self.title}, description={self.description}, publication_date={self.publication_date}, page_number={self.page_number}, authors_ids={self.authors_ids}"
