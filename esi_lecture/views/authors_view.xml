@@ -2,70 +2,46 @@
 <odoo>
 
     <!-- List view -->
-    <record id="base.view_partner_tree" model="ir.ui.view">
+    <record id="view_partner_tree_author" model="ir.ui.view">
         <field name="name">Authors Book Tree</field>
         <field name="model">res.partner</field>
-        <field name="priority">15</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
         <field name="arch" type="xml">
-            <tree>
-                <field name="name"/>
-                <field name="mobile"/>
-                <field name="email"/>
-                <field name="id"/>
-                <field name="city"/>
-                <field name="country_id"/>
-                <field name="company_id"/>
+            <field name="active" position="after">
                 <field name="books_count"/>
-            </tree>
+            </field>
         </field>
     </record>
 
 
     <!-- Search view -->
-    <record id="view_filter_author_book" model="ir.ui.view">
+    <record id="view_res_partner_filter_author" model="ir.ui.view">
         <field name="name">Authors Book Filter</field>
         <field name="model">res.partner</field>
-        <field name="priority">15</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
         <field name="arch" type="xml">
-            <search>
-                <field name="title"/>
+            <field name="name" position="before">
                 <filter string="Authors" name="filter_authors" domain="[('is_author','=','True')]"/>
-            </search>
+            </field>
         </field>
     </record>
 
 
     <!-- Form view -->
-    <record id="base.view_partner_form" model="ir.ui.view">
-        <field name="priority">15</field>
+    <record id="view_partner_form_author" model="ir.ui.view">
         <field name="name">Authors Book Form</field>
         <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
-            <form>
-                <sheet>
-                    <group name="group_top">
-                        <group name="group_left">
-                            <field name="name"/>
-                            <field name="mobile"/>
-                            <field name="email"/>
-                        </group>
-                        <group name="group_right">
-                            <field name="city"/>
-                            <field name="country_id"/>
-                            <field name="company_id"/>
-                            <field name="is_author"/>
-                        </group>
-                    </group>
-                    <group name="group_bottom">
-                        <field name="books_ids"/>
-                    </group>
-                </sheet>
-            </form>
+            <field name="country_id" position="after">
+                <field name="is_author"/>
+                <field name="books_ids"/>
+            </field>
         </field>
     </record>
 
     <!-- Graph view-->
-    <record id="view_graph_reading_book" model="ir.ui.view">
+    <record id="view_partner_graph_author" model="ir.ui.view">
         <field name="name">res.partner.graph</field>
         <field name="model">res.partner</field>
         <field name="arch" type="xml">

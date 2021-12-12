@@ -21,6 +21,8 @@
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
+    'depends': ['point_of_sale'],
+    'depends': ['stock'],
 
     # always loaded
     'data': [
