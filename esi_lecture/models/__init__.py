@@ -3,3 +3,4 @@
 from . import models
 from . import reading_book_model
 from . import author_model
+from . import product_model
