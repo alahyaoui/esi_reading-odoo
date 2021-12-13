@@ -33,10 +33,16 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
-            <field name="country_id" position="after">
+            <field name="category_id" position="after">
                 <field name="is_author"/>
-                <field name="books_ids"/>
             </field>
+            <notebook position="inside">
+                <page name="authors_books" string="Author">
+                    <group>
+                        <field name="books_ids"/>
+                    </group>
+                </page>
+            </notebook>
         </field>
     </record>
 
