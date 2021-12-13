@@ -20,6 +20,8 @@ class Book(models.Model):
 
     authors_ids = fields.Many2many('res.partner', string="Auteurs")
 
+    product_id = fields.Many2one('product.template', string="Product")
+
     _sql_constraints = [
         (
             'esi_lecture_tag_name_unique',

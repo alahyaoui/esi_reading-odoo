@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- Form view -->
+    <record id="view_product_form_book" model="ir.ui.view">
+        <field name="name">Book Product Form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page name="product_books" string="Library">
+                    <group>
+                        <field name="product_books" widget="many2many_tags"/>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+</odoo>
