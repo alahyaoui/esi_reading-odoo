@@ -103,5 +103,32 @@
       <field name="cover" type="base64" file="esi_lecture/static/img/dune1.jpg"></field>
     </record>
 
+    <!--EXEMPLE PROF-->
+    <!--Stock.inventory-->
+    <record id="stock_inventory_0" model="stock.inventory">
+      <field name="name">Starting Inventory</field>
+    </record>
+    <!--Stock.inventory.line-->
+    <record id="stock_inventory_line_1" model="stock.inventory.line">
+      <field name="product_id" ref="product.product_product_24"/>
+      <field name="product_uom_id" ref="uom.product_uom_unit"/>
+      <field name="inventory_id" ref="stock_inventory_0"/>
+      <field name="product_qty">16.0</field>
+      <field name="location_id" model="stock.location"
+              eval="obj().env.ref('stock.warehouse0').lot_stock_id.id"/>
+    </record>
+    <!--_action_start-->
+    <function model="stock.inventory" name="_action_start">
+      <function eval="[[('state','=','draft'),('id', '=', ref('stock_inventory_0'))]]" 
+                model="stock.inventory" name="search"/>
+    </function>
+    <!--action_validate-->
+    <function model="stock.inventory" name="action_validate">
+      <function eval="[[('state','=','confirm'),('id', '=', ref('stock_inventory_0'))]]" 
+                model="stock.inventory" name="search"/>
+    </function>
+
+
+
   </data>
 </odoo>
