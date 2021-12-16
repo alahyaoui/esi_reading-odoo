@@ -38,7 +38,7 @@
         name="Achat" 
         parent="menubar_reading_book" 
         action="stock.stock_picking_type_action" />
-    
+
     <!--Onglet Vente-->
     <menuitem id="point_of_sale_menu" 
         name="Vente" 
