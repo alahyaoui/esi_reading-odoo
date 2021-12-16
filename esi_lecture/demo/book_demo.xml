@@ -86,6 +86,6 @@
             <field name="publication_date" eval="datetime.strptime('2020-10-01', '%Y-%m-%d').date()"></field>
             <field name="cover" type="base64" file="esi_lecture/static/img/dune1.jpg"></field>
         </record>
-        
+
     </data>
 </odoo>
