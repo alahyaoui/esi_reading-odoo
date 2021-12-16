@@ -1,0 +1,21 @@
+<odoo>
+    <data noupdate="1">
+
+        <!-- Adding authors-->
+        <record model="res.partner" id="author_01">
+            <field name="name">Donald E. Knuth</field>
+            <field name="is_author">True</field>
+        </record>
+
+        <record model="res.partner" id="author_02">
+            <field name="name">Frank Herbert</field>
+            <field name="is_author">True</field>
+        </record>
+
+        <record model="res.partner" id="author_03">
+            <field name="name">J.K. Rowling</field>
+            <field name="is_author">True</field>
+        </record>
+
+    </data>
+</odoo>
