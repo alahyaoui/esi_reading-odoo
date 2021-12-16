@@ -7,26 +7,47 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_reading_book" name="Livres"/>
-
-    <menuitem id="reading_book_menu" 
-        name="Livres" 
-        parent="menu_reading_book" />
-
-    <menuitem id="reading_menu" 
-        name="Livres" 
-        parent="reading_book_menu" 
-        action="action_reading_book" />
-    
     <record model="ir.actions.act_window" id="auteurs_list_action">
         <field name="name">Partenaires-Auteurs</field>
         <field name="res_model">res.partner</field>
         <field name="view_mode">tree,form,graph</field>
         <field name="context">{"search_default_filter_authors":1}</field>
     </record>
+
+    <!--Barre de menu du module-->
+    <menuitem id="menubar_reading_book" 
+        name="ESI Lecture"/>
+
+    <!--Onglet Gestion livre-->
+    <menuitem id="book_menu" 
+        name="Gestion des livres" 
+        parent="menubar_reading_book" />
+
+    <menuitem id="reading_menu" 
+        name="Livres" 
+        parent="book_menu" 
+        action="action_reading_book" />
+
+    <menuitem id="auteur_partenaire_menu" 
+        name="Partenaires-Auteurs" 
+        parent="book_menu" 
+        action="auteurs_list_action" />
+
+    <!--Onglet Achat-->
+    <menuitem id="stock_menu" 
+        name="Achat" 
+        parent="menubar_reading_book" 
+        action="stock.stock_picking_type_action" />
     
-    <menuitem id="autheur_menu" name="Auteurs" parent="menu_reading_book" />
-    
-    <menuitem id="auteur_partenaire_menu" name="Partenaires-Auteurs" parent="autheur_menu" action="auteurs_list_action" />
+    <!--Onglet Vente-->
+    <menuitem id="point_of_sale_menu" 
+        name="Vente" 
+        parent="menubar_reading_book" 
+        action="point_of_sale.action_pos_config_kanban" />    
+
+    <!--Onglet Configuration-->
+    <menuitem id="configuration_menu" 
+        name="Configuration" 
+        parent="menubar_reading_book" />
 
 </odoo>
