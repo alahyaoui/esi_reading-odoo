@@ -1,0 +1,41 @@
+<odoo>
+    <data noupdate="1">
+
+        <record id="lot_book_product_01" model="stock.production.lot">
+            <field name="name">0000000000999</field>
+            <field name="product_id" ref="book_product_01"/>
+            <field name="company_id" ref="main_library_supplier_company"/>
+        </record>
+
+        <!-- Resource: stock.inventory -->
+
+        <record id="stock_library_inventory" model="stock.inventory">
+            <field name="name">Library Inventory</field>
+        </record>
+
+
+        <!-- Resource: stock.inventory.line -->
+
+        <record id="stock_library_inventory_line" model="stock.inventory.line">
+            <field name="product_id" ref="book_product_01"/>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="inventory_id" ref="stock_library_inventory"/>
+            <field name="product_qty">80.0</field>
+            <field name="prod_lot_id" ref="lot_book_product_01"/>
+            <field name="location_id" model="stock.location" eval="obj().env.ref('stock.warehouse0').lot_stock_id.id"/>
+        </record>
+
+        <!--_action_start-->
+        <function model="stock.inventory" name="_action_start">
+            <function eval="[[('state','=','draft'),('id', '=', ref('stock_library_inventory'))]]"
+                      model="stock.inventory" name="search"/>
+        </function>
+
+        <!--action_validate-->
+        <function model="stock.inventory" name="action_validate">
+            <function eval="[[('state','=','confirm'),('id', '=', ref('stock_library_inventory'))]]"
+                      model="stock.inventory" name="search"/>
+        </function>
+
+    </data>
+</odoo>
