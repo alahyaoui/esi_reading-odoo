@@ -31,11 +31,19 @@
         'views/reading_view.xml',
         'views/authors_view.xml',
         'views/product_view.xml',
-        'demo/demo.xml',
+        'demo/author_demo.xml',
+        'demo/book_demo.xml',
+        'demo/product_demo.xml',
+        'demo/supplier_demo.xml',
+        'demo/stock_demo.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+        'demo/author_demo.xml',
+        'demo/book_demo.xml',
+        'demo/product_demo.xml',
+        'demo/supplier_demo.xml',
+        'demo/stock_demo.xml',
     ],
     'application': True,
 }

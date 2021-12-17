@@ -1,0 +1,11 @@
+<odoo>
+    <data noupdate="1">
+
+        <!-- Je dois demander si je dois en faire une company ou un res partner-->
+        <!-- Companies -->
+        <record id="main_library_supplier_company" model="res.company">
+            <field name="name">Presses Universitaires de Bruxelles</field>
+        </record>
+
+    </data>
+</odoo>
