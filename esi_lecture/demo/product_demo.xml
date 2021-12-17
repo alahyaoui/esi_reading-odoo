@@ -5,18 +5,91 @@
         <record id="book_product_01" model="product.product">
             <field name="name">Coffret Potter</field>
             <field name="available_in_pos">True</field>
-            <field name="standard_price">100.00</field>
-            <field name="list_price">80.00</field>
-            <field name="weight">3.00</field>
+            <field name="standard_price">40.00</field>
+            <field name="list_price">50.00</field>
+            <field name="weight">0.7</field>
             <field name="to_weight">True</field>
             <field name="type">product</field>
             <field name="categ_id" ref="point_of_sale.product_category_pos"/>
             <field name="uom_id" ref="uom.product_uom_unit"/>
             <field name="uom_po_id" ref="uom.product_uom_unit"/>
-            <field name="default_code">BOOK_0001</field>
+            <field name="qty_available">10</field>
+            <field name="default_code">Box1</field>
             <field name="product_books"
                    eval="[(4, ref('book_01'), None),(4, ref('book_02'), None),(4, ref('book_03'), None)]"/>
             <field name="image_1920" type="base64" file="esi_lecture/static/img/harryPotterCollection.jpg"></field>
+        </record>
+
+        <record id="book_product_02" model="product.product">
+            <field name="name">Harry Potter, I : Harry Potter à l'école des sorciers</field>
+            <field name="available_in_pos">True</field>
+            <field name="standard_price">8.90</field>
+            <field name="list_price">14.90</field>
+            <field name="weight">0.18</field>
+            <field name="to_weight">True</field>
+            <field name="type">product</field>
+            <field name="categ_id" ref="point_of_sale.product_category_pos"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="qty_available">42</field>
+            <field name="default_code">2070584623</field>
+            <field name="product_books"
+                   eval="[(4, ref('book_01'), None)]"/>
+            <field name="image_1920" type="base64" file="esi_lecture/static/img/harryPotter1.jpg"></field>
+        </record>
+
+        <record id="book_product_03" model="product.product">
+            <field name="name">Harry Potter et la chambre des secrets</field>
+            <field name="available_in_pos">True</field>
+            <field name="standard_price">9.90</field>
+            <field name="list_price">14.90</field>
+            <field name="weight">0.23</field>
+            <field name="to_weight">True</field>
+            <field name="type">product</field>
+            <field name="categ_id" ref="point_of_sale.product_category_pos"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="qty_available">100</field>
+            <field name="default_code">207058464X</field>
+            <field name="product_books"
+                   eval="[(4, ref('book_02'), None)]"/>
+            <field name="image_1920" type="base64" file="esi_lecture/static/img/harryPotter2.jpg"></field>
+        </record>
+        
+        <record id="book_product_04" model="product.product">
+            <field name="name">Harry Potter, III : Harry Potter et le prisonnier d'Azkaban</field>
+            <field name="available_in_pos">True</field>
+            <field name="standard_price">9.90</field>
+            <field name="list_price">14.90</field>
+            <field name="weight">0.23</field>
+            <field name="to_weight">True</field>
+            <field name="type">product</field>
+            <field name="categ_id" ref="point_of_sale.product_category_pos"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="qty_available">130</field>
+            <field name="default_code">2070584925</field>
+            <field name="product_books"
+                   eval="[(4, ref('book_03'), None)]"/>
+            <field name="image_1920" type="base64" file="esi_lecture/static/img/harryPotter3.jpg"></field>
+        </record>
+
+        <record id="book_product_05" model="product.product">
+            <field name="name">Dune - Tome 1</field>
+            <field name="available_in_pos">True</field>
+            <field name="standard_price">19.90</field>
+            <field name="list_price">24.99</field>
+            <field name="weight">0.86</field>
+            <field name="to_weight">True</field>
+            <field name="type">product</field>
+            <field name="categ_id" ref="point_of_sale.product_category_pos"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="qty_available">500</field>
+            <field name="default_code">2221249488</field>
+            <field name="product_books"
+                   eval="[(4, ref('book_04'), None)]"/>
+            <field name="image_1920" type="base64" file="esi_lecture/static/img/dune1.jpg"></field>
         </record>
 
     </data>

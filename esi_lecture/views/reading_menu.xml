@@ -28,11 +28,6 @@
         parent="book_menu" 
         action="action_reading_book" />
 
-    <menuitem id="auteur_partenaire_menu" 
-        name="Partenaires-Auteurs" 
-        parent="book_menu" 
-        action="auteurs_list_action" />
-
     <!--Onglet Achat-->
     <menuitem id="stock_menu" 
         name="Achat" 
@@ -49,5 +44,10 @@
     <menuitem id="configuration_menu" 
         name="Configuration" 
         parent="menubar_reading_book" />
+
+    <menuitem id="auteur_partenaire_menu" 
+        name="Partenaires-Auteurs" 
+        parent="configuration_menu" 
+        action="auteurs_list_action" />
 
 </odoo>
