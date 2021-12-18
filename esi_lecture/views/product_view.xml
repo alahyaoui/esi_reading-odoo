@@ -10,7 +10,7 @@
             <notebook position="inside">
                 <page name="product_books" string="Library">
                     <group>
-                        <field name="product_books" attrs="{'product_books.title' : ['product_books','=',Integer]}" widget="many2many_tags"></field>
+                        <field name="product_books" widget="many2many_tags"></field>
                     </group>
                 </page>
             </notebook>
