@@ -33,6 +33,7 @@
         'demo/book_demo.xml',
         'demo/product_demo.xml',
         'demo/supplier_demo.xml',
+        'demo/lot_product_demo.xml',
         'demo/stock_demo.xml',
     ],
 
@@ -42,6 +43,7 @@
         'demo/book_demo.xml',
         'demo/product_demo.xml',
         'demo/supplier_demo.xml',
+        'demo/lot_product_demo.xml',
         'demo/stock_demo.xml',
     ],
     'application': True,
