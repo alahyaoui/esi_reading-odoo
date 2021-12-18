@@ -1,0 +1,33 @@
+<odoo>
+    <data noupdate="1">
+
+        <!--Product-->
+        <record id="quant_product_01" model="stock.quant">
+            <field name="product_id" ref="book_product_01"/>
+            <field name="company_id" ref="main_library_supplier_company"/>
+            <field name="lot_id" ref="lot_book_product_01"/>
+            <field name="inventory_quantity">10</field>
+            <field name="available_quantity">10</field>
+            <field name="location_id" model="stock.location" eval="obj().env.ref('stock.warehouse0').lot_stock_id.id"/>
+        </record>
+
+        <record id="quant_product_02" model="stock.quant">
+            <field name="product_id" ref="book_product_02"/>
+            <field name="company_id" ref="main_library_supplier_company"/>
+            <field name="lot_id" ref="lot_book_product_02"/>
+            <field name="inventory_quantity">42</field>
+            <field name="available_quantity">42</field>
+            <field name="location_id" model="stock.location" eval="obj().env.ref('stock.warehouse0').lot_stock_id.id"/>
+        </record>
+
+        <record id="quant_product_03" model="stock.quant">
+            <field name="product_id" ref="book_product_03"/>
+            <field name="company_id" ref="main_library_supplier_company"/>
+            <field name="lot_id" ref="lot_book_product_03"/>
+            <field name="inventory_quantity">100</field>
+            <field name="available_quantity">100</field>
+            <field name="location_id" model="stock.location" eval="obj().env.ref('stock.warehouse0').lot_stock_id.id"/>
+        </record>
+
+    </data>
+</odoo>

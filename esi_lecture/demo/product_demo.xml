@@ -13,7 +13,6 @@
             <field name="categ_id" ref="point_of_sale.product_category_pos"/>
             <field name="uom_id" ref="uom.product_uom_unit"/>
             <field name="uom_po_id" ref="uom.product_uom_unit"/>
-            <field name="qty_available">10</field>
             <field name="default_code">Box1</field>
             <field name="product_books"
                    eval="[(4, ref('book_01'), None),(4, ref('book_02'), None),(4, ref('book_03'), None)]"/>
@@ -31,7 +30,6 @@
             <field name="categ_id" ref="point_of_sale.product_category_pos"/>
             <field name="uom_id" ref="uom.product_uom_unit"/>
             <field name="uom_po_id" ref="uom.product_uom_unit"/>
-            <field name="qty_available">42</field>
             <field name="default_code">2070584623</field>
             <field name="product_books"
                    eval="[(4, ref('book_01'), None)]"/>
