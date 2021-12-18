@@ -34,9 +34,8 @@
         'demo/product_demo.xml',
         'demo/supplier_demo.xml',
         'demo/stock_demo.xml',
-        'demo/quantity_demo.xml',
     ],
-    
+
     # only loaded in demonstration mode
     'demo': [
         'demo/author_demo.xml',
@@ -44,7 +43,6 @@
         'demo/product_demo.xml',
         'demo/supplier_demo.xml',
         'demo/stock_demo.xml',
-        'demo/quantity_demo.xml',
     ],
     'application': True,
 }
