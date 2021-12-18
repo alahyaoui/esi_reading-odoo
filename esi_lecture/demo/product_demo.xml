@@ -47,7 +47,6 @@
             <field name="categ_id" ref="point_of_sale.product_category_pos"/>
             <field name="uom_id" ref="uom.product_uom_unit"/>
             <field name="uom_po_id" ref="uom.product_uom_unit"/>
-            <field name="qty_available">100</field>
             <field name="default_code">207058464X</field>
             <field name="product_books"
                    eval="[(4, ref('book_02'), None)]"/>
@@ -65,7 +64,6 @@
             <field name="categ_id" ref="point_of_sale.product_category_pos"/>
             <field name="uom_id" ref="uom.product_uom_unit"/>
             <field name="uom_po_id" ref="uom.product_uom_unit"/>
-            <field name="qty_available">130</field>
             <field name="default_code">2070584925</field>
             <field name="product_books"
                    eval="[(4, ref('book_03'), None)]"/>
@@ -83,7 +81,6 @@
             <field name="categ_id" ref="point_of_sale.product_category_pos"/>
             <field name="uom_id" ref="uom.product_uom_unit"/>
             <field name="uom_po_id" ref="uom.product_uom_unit"/>
-            <field name="qty_available">500</field>
             <field name="default_code">2221249488</field>
             <field name="product_books"
                    eval="[(4, ref('book_04'), None)]"/>
