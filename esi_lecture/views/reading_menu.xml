@@ -14,44 +14,50 @@
         <field name="context">{"search_default_filter_authors":1}</field>
     </record>
 
-    <!--Barre de menu du module-->
-    <menuitem id="menubar_reading_book" 
+    <!-- Barre de menu du module -->
+    <menuitem id="menubar_reading_book"
         name="ESI Lecture"/>
 
-    <!--Onglet Gestion livre-->
-    <menuitem id="book_menu" 
-        name="Gestion des livres" 
+    <!--Menu Gestion livre -->
+    <menuitem id="book_menu"
+        name="Gestion des livres"
         parent="menubar_reading_book" />
 
-    <menuitem id="reading_menu" 
-        name="Livres" 
-        parent="book_menu" 
-        action="action_reading_book" />
+    <!-- Sous-Menu Livres -->
+    <menuitem id="reading_menu"
+        name="Livres"
+        parent="book_menu"
+        action="action_reading_book"
+        sequence="1"/>
 
-    <menuitem id="stock.menu_stock_inventory_control" 
-        name="Produit" 
-        parent="book_menu" />
+    <!-- Sous-Menu Product -->
+    <menuitem id="stock.menu_stock_inventory_control"
+              name="Produit"
+              parent="book_menu"
+              sequence="2"/>
 
-    <!--Onglet Achat-->
-    <menuitem id="stock_menu" 
-        name="Achat" 
-        parent="menubar_reading_book" 
+    <!-- Menu Achat -->
+    <menuitem id="stock_menu"
+        name="Achat"
+        parent="menubar_reading_book"
         action="stock.stock_picking_type_action" />
 
-    <!--Onglet Vente-->
-    <menuitem id="point_of_sale_menu" 
-        name="Vente" 
-        parent="menubar_reading_book" 
-        action="point_of_sale.action_pos_config_kanban" />    
+    <!-- Menu Vente -->
+    <menuitem id="point_of_sale_menu"
+        name="Vente"
+        parent="menubar_reading_book"
+        action="point_of_sale.action_pos_config_kanban" />
 
-    <!--Onglet Configuration-->
-    <menuitem id="configuration_menu" 
-        name="Configuration" 
+    <!-- Menu Configuration -->
+    <menuitem id="configuration_menu"
+        name="Configuration"
         parent="menubar_reading_book" />
 
-    <menuitem id="auteur_partenaire_menu" 
-        name="Partenaires-Auteurs" 
-        parent="configuration_menu" 
-        action="auteurs_list_action" />
+    <!-- Sous-Menu Authors -->
+    <menuitem id="auteur_partenaire_menu"
+        name="Partenaires-Auteurs"
+        parent="configuration_menu"
+        action="auteurs_list_action"
+        sequence="1" />
 
 </odoo>
