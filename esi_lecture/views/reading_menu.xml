@@ -28,6 +28,11 @@
         parent="book_menu" 
         action="action_reading_book" />
 
+     <menuitem id="product_menu" 
+        name="Produit" 
+        parent="book_menu" 
+        action="product.product_normal_action_sell" />
+
     <!--Onglet Achat-->
     <menuitem id="stock_menu" 
         name="Achat" 
