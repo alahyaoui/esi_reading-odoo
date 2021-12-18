@@ -15,7 +15,7 @@
             <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="qty_available">10</field>
             <field name="default_code">Box1</field>
-            <field name="product_books"
+            <field name="books_ids"
                    eval="[(4, ref('book_01'), None),(4, ref('book_02'), None),(4, ref('book_03'), None)]"/>
             <field name="image_1920" type="base64" file="esi_lecture/static/img/harryPotterCollection.jpg"></field>
         </record>
@@ -33,7 +33,7 @@
             <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="qty_available">42</field>
             <field name="default_code">2070584623</field>
-            <field name="product_books"
+            <field name="books_ids"
                    eval="[(4, ref('book_01'), None)]"/>
             <field name="image_1920" type="base64" file="esi_lecture/static/img/harryPotter1.jpg"></field>
         </record>
@@ -51,7 +51,7 @@
             <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="qty_available">100</field>
             <field name="default_code">207058464X</field>
-            <field name="product_books"
+            <field name="books_ids"
                    eval="[(4, ref('book_02'), None)]"/>
             <field name="image_1920" type="base64" file="esi_lecture/static/img/harryPotter2.jpg"></field>
         </record>
@@ -69,7 +69,7 @@
             <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="qty_available">130</field>
             <field name="default_code">2070584925</field>
-            <field name="product_books"
+            <field name="books_ids"
                    eval="[(4, ref('book_03'), None)]"/>
             <field name="image_1920" type="base64" file="esi_lecture/static/img/harryPotter3.jpg"></field>
         </record>
@@ -87,7 +87,7 @@
             <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="qty_available">500</field>
             <field name="default_code">2221249488</field>
-            <field name="product_books"
+            <field name="books_ids"
                    eval="[(4, ref('book_04'), None)]"/>
             <field name="image_1920" type="base64" file="esi_lecture/static/img/dune1.jpg"></field>
         </record>

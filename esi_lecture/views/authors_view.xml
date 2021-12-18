@@ -39,7 +39,7 @@
             <notebook position="inside">
                 <page name="authors_books" string="Author">
                     <group>
-                        <field name="books_ids"/>
+                        <field name="books_ids" widget="many2many_tags"/>
                     </group>
                 </page>
             </notebook>
