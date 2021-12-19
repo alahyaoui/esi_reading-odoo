@@ -31,10 +31,11 @@
         sequence="1"/>
 
     <!-- Sous-Menu Product -->
-    <menuitem id="stock.menu_stock_inventory_control"
+    <menuitem id="product_menu"
               name="Produit"
               parent="book_menu"
-              sequence="2"/>
+              sequence="2"
+              action="stock.product_template_action_product"/>
 
     <!-- Menu Achat -->
     <menuitem id="stock_menu"
