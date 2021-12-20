@@ -38,10 +38,10 @@
 
     <!-- Sous-Menu Product -->
     <menuitem id="product_menu"
-              name="Produits"
-              parent="book_menu"
-              sequence="2"
-              action="product_list_action"/>
+        name="Produits"
+        parent="book_menu"
+        sequence="2"
+        action="product_list_action"/>
 
     <!-- Menu Achat -->
     <menuitem id="stock_menu"
