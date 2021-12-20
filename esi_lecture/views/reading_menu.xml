@@ -14,6 +14,12 @@
         <field name="context">{"search_default_filter_authors":1}</field>
     </record>
 
+    <record model="ir.actions.act_window" id="product_list_action">
+        <field name="name">Produits</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <!-- Barre de menu du module -->
     <menuitem id="menubar_reading_book"
         name="ESI Lecture"/>
@@ -32,10 +38,10 @@
 
     <!-- Sous-Menu Product -->
     <menuitem id="product_menu"
-              name="Produit"
+              name="Produits"
               parent="book_menu"
               sequence="2"
-              action="stock.product_template_action_product"/>
+              action="product_list_action"/>
 
     <!-- Menu Achat -->
     <menuitem id="stock_menu"
