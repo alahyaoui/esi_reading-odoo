@@ -1,0 +1,16 @@
+<odoo>
+    <!-- Action Gestion des prets -->
+    <record model="ir.actions.act_window" id="action_reading_rent">
+        <field name="name">Prêts</field>
+        <field name="res_model">reading.rent</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{"search_default_filter_rented":1}</field>
+    </record>
+
+    <!--Menu Gestion prets -->
+    <menuitem id="rent_menu"
+        name="Gestion des prêts"
+        action="action_reading_rent"
+        parent="esi_lecture.menubar_reading_book"
+        sequence="1"/>
+</odoo>

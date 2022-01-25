@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- Form view -->
+    <record id="view_partner_form_author" model="ir.ui.view">
+        <field name="name">Member Rent Form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <field name="category_id" position="after">
+                <field name="number"/>
+            </field>
+            <notebook position="inside">
+                <page name="member_rents" string="Member">
+                    <group>
+                        <field name="rent_ids" widget="many2many_tags"/>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+</odoo>

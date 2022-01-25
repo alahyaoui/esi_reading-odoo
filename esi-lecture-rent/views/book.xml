@@ -1,0 +1,13 @@
+<odoo>
+    <!-- Form view -->
+    <record id="view_form_reading_book_inherited" model="ir.ui.view">
+        <field name="name">Reading Book Form</field>
+        <field name="model">reading.book</field>
+        <field name="inherit_id" ref="esi_lecture.view_form_reading_book"/>
+        <field name="arch" type="xml">
+            <field name="page_number" position="after">
+                <field name="rent_count"></field>
+            </field>
+        </field>
+    </record>
+</odoo>

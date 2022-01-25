@@ -1,0 +1,51 @@
+<odoo>
+    <!-- List view -->
+    <record id="view_tree_reading_rent" model="ir.ui.view">
+        <field name="name">Reading Rent Tree</field>
+        <field name="model">reading.rent</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="book_id"/>
+                <field name="member_id"/>
+                <field name="state"/>
+                <field name="return_date"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- Search view -->
+    <record id="view_filter_reading_rent" model="ir.ui.view">
+        <field name="name">Reading Rent Filter</field>
+        <field name="model">reading.rent</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="book_id"/>
+                <filter string="Perdu" name="filter_lost" domain="[('state','=','lost')]"/>
+                <filter string="Emprunté" name="filter_rented" domain="[('state','=','rented')]"/>
+            </search>
+        </field>
+    </record>
+
+
+    <!-- Form view -->
+    <record id="view_form_reading_rent" model="ir.ui.view">
+        <field name="name">Reading Rent Form</field>
+        <field name="model">reading.rent</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group name="group_left">
+                        <field name="rent_date"/>
+                        <field name="return_date"/>
+                        <field name="book_id"/>
+                        <field name="member_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
