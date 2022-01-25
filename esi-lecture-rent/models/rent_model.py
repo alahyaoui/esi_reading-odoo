@@ -20,7 +20,7 @@ class Rent(models.Model):
         self.state = 'lost'
 
     def set_returned(self):
-        self.state = 'rented'
+        self.state = 'returned'
 
     def write(self, values):
         if values['state'] == 'rented' and self.state != 'returned':
