@@ -35,6 +35,10 @@
         <field name="arch" type="xml">
             <form>
                 <header>
+                    <button name="set_lost" type="object" string="Livre perdu"
+                            attrs="{'invisible': [('state','!=','rented')]}" class="oe_edit_only"/>
+                    <button name="set_returned" type="object" string="Livre retourné"
+                            attrs="{'invisible': [('state','=','returned')]}" class="oe_edit_only"/>
                     <field name="state" widget="statusbar"/>
                 </header>
                 <sheet>
