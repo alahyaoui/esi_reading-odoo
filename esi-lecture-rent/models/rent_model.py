@@ -15,3 +15,8 @@ class Rent(models.Model):
 
     book_id = fields.Many2one('reading.book', string='Livre prêté', required=True)
     member_id = fields.Many2one('res.partner', string='Membre', required=True)
+
+    def write(self, values):
+        if values['state'] == 'rented' and self.state != 'returned':
+            raise exceptions.ValidationError('Le livre doit etre retourné avant de pouvoir etre de nouveau emprunté.')
+        return super(Rent, self).write(values)
