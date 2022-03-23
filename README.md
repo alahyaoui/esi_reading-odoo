@@ -1,6 +1,6 @@
 # esi_reading
 Developed in the context of my enterprise resource planning course Ecole Supérieur d'Informatique (ESI | HE2B) college. 
-esi_reading is an odoo module helping bookstore organizations to store, buy and sell books.
+esi_reading is an odoo module helping bookstore organizations to store, rent, buy and sell books
 
 # Definition
 ## Enterprise resource planning
