@@ -29,7 +29,7 @@ Nota Bene: You need to have odoo installed.
 > or you can install odoo from <a href="https://www.odoo.com/page/download">here</a>
 
 # Execution
-First time (it will generate a config file with the given config options
+First time (it will generate a config file with the given config options)
 ```
 $ python odoo-bin --database=<name> --db_user=<user> --db_password=<password> --db_host=<host> --db_port=<port> --config <path_to_config_file> --save
 ```
@@ -43,6 +43,11 @@ $ python odoo-bin --database=<name> --db_user=<user> --db_password=<password> --
 example:
 ```
 $ python odoo-bin --database=dev01 --db_user=erp --db_password=admin --db_host=localhost --db_port=5432 --config ../../.odoorc --save
+```
+
+Second time (after that the config file has been generated)
+```
+$ python <path_to_odoo-bin> --config <path_to_config_file>
 ```
 
 # Usage
